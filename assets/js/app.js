@@ -522,7 +522,7 @@
         scaleControl: false,
         draggable: true,
         disableDefaultUI: true,
-        center: new google.maps.LatLng(40.6700, -73.9400),
+        center: new google.maps.LatLng(17.3850, 78.4867), // Updated to Hyderabad
         styles: [{
           "featureType": "landscape.man_made",
           "elementType": "geometry",
@@ -618,12 +618,12 @@
       var mapElement = document.getElementById('map');
       var map = new google.maps.Map(mapElement, mapOptions);
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
+        position: new google.maps.LatLng(17.3850, 78.4867), // Updated to Hyderabad
         map: map,
         // icon: 'assets/images/all-img/contact/map.png',
-        title: 'tekup'
+        title: 'Hyderabad'
       });
-      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>tekup' + '</div>';
+      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>Hyderabad' + '</div>';
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
         maxWidth: 280
@@ -632,7 +632,7 @@
       setTimeout(function () {
         marker.setAnimation(null);
       }, 750); //time it takes for one bounce   
-
+  
       google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
       });
@@ -641,4 +641,5 @@
   }
   var currentYear = new Date().getFullYear();
   $('#current-year').text(currentYear);
+  
 })(jQuery);
