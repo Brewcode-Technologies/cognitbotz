@@ -60,23 +60,7 @@
 
 
   <header class="site-header tekup-header-section" id="sticky-menu">
-    <div class="tekup-header-top bg-dark">
-      <div class="container-fuild">
-        <div class="tekup-header-info-wrap">
-          <div class="tekup-header-info">
-            <ul>
-              <li><i class="ri-map-pin-2-fill"></i>205 Dipprey Lane, Georgetown, TX 78628</li>
-              <li><a href="tel:123"><i class="ri-phone-fill"></i>+1 (512) 630-0934</a></li>
-            </ul>
-          </div>
-          <div class="tekup-header-info">
-            <ul>
-              <li><i class="ri-time-fill"></i>Office Hours: 8:00 AM – 10:00 PM</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="tekup-header-bottom bg-white">
       <div class="container-fuild">
         <nav class="navbar site-navbar">
@@ -185,7 +169,7 @@
         <div class="col-xl-5 col-lg-6 d-flex align-items-center">
           <div class="tekup-default-content">
             <h2>Let’s build an awesome project together</h2>
-            <p>At our IT solution company, we are committed to exceptional customer service and support. If you are experiencing technical difficulties or need assistance with</p>
+            <p>At Cognibotz, we are committed to exceptional customer service and support. If you are experiencing technical difficulties or need assistance, please contact us.</p>
             <div class="tekup-contact-info-wrap wrap2">
               <div class="tekup-contact-info mb-0">
                 <i class="ri-map-pin-2-fill"></i>
@@ -206,30 +190,30 @@
           <div class="tekup-main-form">
             <h3>Fill The Contact Form</h3>
             <p>Feel free to contact with us, we don’t spam your email</p>
-            <form action="#">
+            <form id="contact-form" action="php/contact.php" method="POST">
               <div class="row">
                 <div class="col-lg-6">
                   <div class="tekup-main-field">
-                    <input type="text" placeholder="Your name">
+                    <input type="text" name="name" placeholder="Your name"> <!-- Updated name attribute -->
                   </div>
                 </div>
                 <div class="col-lg-6">
                   <div class="tekup-main-field">
-                    <input type="number" placeholder="Phone number">
+                    <input type="number" name="phone" maxlength='12' placeholder="Phone number"> <!-- Updated name attribute -->
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="tekup-main-field">
-                    <input type="email" placeholder="Email address">
+                    <input type="email" name="email" placeholder="Email address"> <!-- Updated name attribute -->
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="tekup-main-field">
-                    <textarea name="textarea" placeholder="Write your message"></textarea>
+                    <textarea name="textarea" placeholder="Write your message"></textarea> <!-- Updated name attribute -->
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <button id="tekup-main-form-btn" type="button">Send Message <i class="ri-arrow-right-up-line"></i></button>
+                  <button id="tekup-main-form-btn" type="submit">Send Message <i class="ri-arrow-right-up-line"></i></button>
                 </div>
               </div>
             </form>
@@ -240,7 +224,7 @@
   </div>
   <!-- End section -->
 
-  <div id="map"></div>
+
 
 
 
@@ -365,6 +349,33 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
 
   <script src="assets/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("#contact-form").on("submit", function (event) {
+        event.preventDefault(); 
+
+        var formData = $(this).serialize(); 
+
+        console.log("Form Data:", formData); 
+
+        $.ajax({
+            url: "php/contact.php",
+            type: "POST",
+            data: formData,
+            success: function (response) {
+                console.log("Server Response:", response);
+                alert("Form submitted successfully!");
+                $("#contact-form")[0].reset();
+            },
+            error: function (xhr) {
+                console.log("Error Response:", xhr.responseText);
+                alert("Error: " + xhr.responseText);
+            }
+        });
+    });
+});
+</script>
 
 
 </body>

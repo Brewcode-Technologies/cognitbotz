@@ -60,23 +60,6 @@
 
 
   <header class="site-header tekup-header-section" id="sticky-menu">
-    <div class="tekup-header-top bg-dark">
-      <div class="container-fuild">
-        <div class="tekup-header-info-wrap">
-          <div class="tekup-header-info">
-            <ul>
-              <li><i class="ri-map-pin-2-fill"></i>205 Dipprey Lane, Georgetown, TX 78628</li>
-              <li><a href="tel:123"><i class="ri-phone-fill"></i>+1 (512) 630-0934</a></li>
-            </ul>
-          </div>
-          <div class="tekup-header-info">
-            <ul>
-              <li><i class="ri-time-fill"></i>Office Hours: 8:00 AM – 10:00 PM</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="tekup-header-bottom bg-white">
       <div class="container-fuild">
         <nav class="navbar site-navbar">
@@ -170,18 +153,13 @@
         <p>We are architects of innovation, trailblazers of technological advancement, and partners in your success. As a dynamic and forward-thinking organization</p>
         <div class="tekup-extra-mt">
           <div class="tekup-hero-btn-wrap center">
-            <a class="tekup-default-btn" data-aos="fade-up" data-aos-duration="600" href="">Start a Project <i class="ri-arrow-right-up-line"></i></a>
-            <a class="tekup-default-btn outline-btn-white" data-aos="fade-up" data-aos-duration="800" href="">Our Works <i class="ri-arrow-right-up-line"></i></a>
+            <a class="tekup-default-btn" data-aos="fade-up" data-aos-duration="600" href="contact-us.html">Start a Project <i class="ri-arrow-right-up-line"></i></a>
+            <!-- <a class="tekup-default-btn outline-btn-white" data-aos="fade-up" data-aos-duration="800" href="Application-Development.html">Our Works <i class="ri-arrow-right-up-line"></i></a> -->
           </div>
         </div>
       </div>
       <div class="tekup-video-wrap extra-padding-top" data-aos="fade-up" data-aos-duration="600">
         <img src="assets/images/group-people-are-shaking-hands-meeting.jpg" alt="">
-        <a class="tekup-video-popup video-init" href="">
-          <img src="assets/images/v4/play-btn.png" alt="">
-          <div class="waves wave-1"></div>
-          <div class="waves wave-2"></div>
-          <div class="waves wave-3"></div>
         </a>
       </div>
     </div>
@@ -243,7 +221,7 @@
       <div class="row">
         <div class="col-xl-6 col-lg-6" data-aos="fade-up" data-aos-duration="600">
           <div class="tekup-thumb">
-            <img src="assets/images/cheerful-business-team-looking-laptop.jpg" alt="">
+            <img src="assets/images/brown-coffee-cup-coffee-drip-laptop-wooden-table.jpg" alt="">
             <div class="tekup-thumb-card">
               <!-- <img src="assets/images/cheerful-business-team-looking-laptop.jpg" alt=""> -->
             </div>
@@ -325,49 +303,43 @@
   <!-- End section -->
 
   <div class="tekup-portfolio-section bg-light1 tekup-section-padding-top">
-    <div class="container">
+    <div class="container center" style='display: flex; justify-content: center;'>
       <div class="tekup-section-title center light-color">
         <h2>Let’s build an awesome project together</h2>
       </div>
-      <div class="tekup-map-form-wrap bg-white">
+      <div class="tekup-map-form-wrap bg-white col-lg-6"> 
         <div class="row">
-          <div class="col-lg-7 d-flex align-items-center">
+          <div class=" d-flex align-items-center">
             <div class="tekup-main-form border-0">
               <h3>Fill The Contact Form</h3>
               <p>Feel free to contact with us, we don’t spam your email</p>
-              <form action="#">
+              <form id="contact-form" action="php/contact.php" method="POST">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="tekup-main-field">
-                      <input type="text" placeholder="Your name">
+                      <input type="text" name="name" placeholder="Your name"> 
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="tekup-main-field">
-                      <input type="number" placeholder="Phone number">
+                      <input type="number" name="phone" maxlength='12' placeholder="Phone number"> 
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="tekup-main-field">
-                      <input type="email" placeholder="Email address">
+                      <input type="email" name="email" placeholder="Email address"> 
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="tekup-main-field">
-                      <textarea name="textarea" placeholder="Write your message"></textarea>
+                      <textarea name="textarea" placeholder="Write your message"></textarea> 
                     </div>
                   </div>
                   <div class="col-lg-12">
-                    <button id="tekup-main-form-btn" type="button">Send Message <i class="ri-arrow-right-up-line"></i></button>
+                    <button id="tekup-main-form-btn" type="submit">Send Message <i class="ri-arrow-right-up-line"></i></button>
                   </div>
                 </div>
-
               </form>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="tekup-map-one">
-              <div id="map"></div>
             </div>
           </div>
         </div>
@@ -376,11 +348,8 @@
   </div>
   <!-- End section -->
 
-  <div id="brand" class="section bg-light1 tekup-section-padding">
+  <!-- <div id="brand" class="section bg-light1 tekup-section-padding">
     <div class="container">
-      <div class="tekup-section-title center">
-        <p>Empowered professionals to connect with top-tier opportunities</p>
-      </div>
       <div class="tekup-brand-slider">
         <div class="tekup-brand-slider-item">
           <img src="assets/images/v3/b_1.png" alt="">
@@ -402,7 +371,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- End section -->
 
   <!-- <div id="pricing" class="section tekup-section-padding2">
@@ -624,27 +593,13 @@
                 <!-- <img src="assets/images/logo/logo-white.svg" alt=""> -->
                 <h3 style='color: white;'>COGNIBOTZ</h3>
               </a>
-              <p>We are architects of advancement, and partners in your success. As a dynamic forward</p>
+              <p>We are architects of progress and partners in your success, delivering innovative solutions that empower businesses and ensure long-term growth.
+              </p>
               <div class="tekup-social-icon-box style-two">
                 <ul>
                   <li>
-                    <a href="https://www.facebook.com/">
-                      <i class="ri-facebook-fill"></i>
-                    </a>
-                  </li>
-                  <li>
                     <a href="https://www.linkedin.com/">
                       <i class="ri-linkedin-fill"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/">
-                      <i class="ri-twitter-fill"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/">
-                      <i class="ri-instagram-fill"></i>
                     </a>
                   </li>
                 </ul>
@@ -674,20 +629,6 @@
               </ul>
             </div>
           </div>
-          <div class="col-xl-3 col-md-5">
-            <div class="tekup-footer-title light-color light-color">
-              <h5>Subscribe Our Newsletter</h5>
-              <p>Get ready to work together for the better solution for your business</p>
-            </div>
-            <div class="tekup-subscription">
-              <form action="#">
-                <input type="email" placeholder="Enter your email">
-                <button id="tekup-subscription-btn" type="button">
-                  <i class="ri-send-plane-fill"></i>
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
       <div class="tekup-footer-bottom">
@@ -695,14 +636,6 @@
           <div class="col-md-6">
             <div class="tekup-copywright light-color right">
               <p> &copy; <span id="current-year"></span> All rights reserved.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="tekup-footer-menu light-color style-two right mb-0">
-              <ul>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms & Conditions</a></li>
-              </ul>
             </div>
           </div>
         </div>
@@ -734,6 +667,33 @@
 
   <script src="assets/js/app.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+  $(document).ready(function () {
+      $("#contact-form").on("submit", function (event) {
+          event.preventDefault(); 
+  
+          var formData = $(this).serialize(); 
+  
+          console.log("Form Data:", formData); 
+  
+          $.ajax({
+              url: "php/contact.php",
+              type: "POST",
+              data: formData,
+              success: function (response) {
+                  console.log("Server Response:", response);
+                  alert("Form submitted successfully!");
+                  $("#contact-form")[0].reset();
+              },
+              error: function (xhr) {
+                  console.log("Error Response:", xhr.responseText);
+                  alert("Error: " + xhr.responseText);
+              }
+          });
+      });
+  });
+  </script>
 
 </body>
 </html>
