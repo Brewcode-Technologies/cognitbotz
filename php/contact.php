@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Email content
-    $recipient = "jakkawarr@gmail.com"; 
+    $recipient = "admin@cognibotz.com";
     $subject = "New Contact Form Submission from $name";
     $email_message = "Name: $name\nPhone: $phone\nEmail: $email\nMessage: $message\n";
 

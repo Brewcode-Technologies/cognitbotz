@@ -1019,3 +1019,122 @@ a.log-in-btn:hover:after {
   background-color: #fff;
 }
 
+
+
+/* Base Styles */
+.tekup-default-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #2a2a2a;
+  line-height: 1.6;
+}
+
+/* Headings */
+.tekup-default-content h3 {
+  color: #1a365d;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tekup-default-content h4 {
+  color: #2d3748;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+}
+
+/* Paragraphs */
+.tekup-default-content p {
+  margin-bottom: 1.2rem;
+  color: #444444;
+  font-size: 1rem;
+}
+
+/* Lists */
+.tekup-default-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.tekup-default-content li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.tekup-default-content li::before {
+  content: '•';
+  color: #4a5568;
+  position: absolute;
+  left: 0;
+}
+
+/* Links */
+.tekup-default-content a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tekup-default-content a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Contact Info Section */
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #007bff;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #4a5568;
+}
+
+.contact-info strong {
+  color: #2d3748;
+}
+
+/* Effective Date */
+.tekup-default-content > p:first-child {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tekup-default-content {
+      padding: 1rem;
+      font-size: 0.95rem;
+  }
+  
+  .tekup-default-content h3 {
+      font-size: 1.5rem;
+  }
+  
+  .tekup-default-content h4 {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+      padding: 1rem;
+  }
+  
+  .tekup-default-content li {
+      padding-left: 0.5rem;
+  }
+}
