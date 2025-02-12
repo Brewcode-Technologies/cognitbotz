@@ -2161,7 +2161,7 @@ header.tekup-header-section.header-seven.sticky-menu {
 }
 .tekup-contact-info-wrap.wrap2 .tekup-contact-info {
   padding-top: 30px;
-  padding-right: 50px;
+  padding-right: 25px;
   border-right: 1px solid #E7E7E8;
 }
 @media (max-width: 1399px) {
@@ -2172,7 +2172,7 @@ header.tekup-header-section.header-seven.sticky-menu {
 .tekup-contact-info-wrap.wrap2 .tekup-contact-info:last-child {
   border-right: 0;
   padding-right: 0;
-  padding-left: 50px;
+  padding-left: 25px;
 }
 @media (max-width: 1399px) {
   .tekup-contact-info-wrap.wrap2 .tekup-contact-info:last-child {
